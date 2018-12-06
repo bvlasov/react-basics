@@ -1,16 +1,41 @@
 import React from 'react';
+import List from './List';
+import heroes from '../utils/heroes';
+import TextTrimmer from './TextTrimmer';
 
-const formatName = user => `${user.firstName} ${user.lastName}`;
+function heroRender(node, element) {
+	if (node === 'li') {
+		return (
+			<li key={element.id}>
+				<figure>
+					<figcaption>{element.hero}</figcaption>
+					<img src={element.avatar} alt={element.hero} />
+					<figcaption>{element.name}</figcaption>
+				</figure>
+				<TextTrimmer text={element.description} />
+			</li>
+		);
+	} else
+		return (
+			<div key={element.id}>
+				<figure>
+					<figcaption>{element.hero}</figcaption>
+					<img src={element.avatar} alt={element.hero} />
+					<figcaption>{element.name}</figcaption>
+				</figure>
+				<TextTrimmer text={element.description} />
+			</div>
+		);
+}
 
-const user = {
-	firstName: 'John',
-	lastName: 'Doe'
-};
-
-const Home = () => (
-	<div>
-		<h1>Hello, {formatName(user)}!</h1>
-	</div>
-);
+class Home extends React.Component {
+	render() {
+		return (
+			<div>
+				<List options={heroes} node="div" itemRenderer={heroRender} />
+			</div>
+		);
+	}
+}
 
 export default Home;
