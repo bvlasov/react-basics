@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 
 import Home from './components/Home';
 
+const user = {
+	firstName: 'John',
+	lastName: 'Doe'
+};
+
 const renderApplication = () => {
 	ReactDOM.render(
 		<Home />,
@@ -18,3 +23,6 @@ if (module.hot) {
 		renderApplication();
 	});
 }
+
+
+// e.nativeEvent
