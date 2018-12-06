@@ -15,7 +15,7 @@ export default class List extends React.Component {
 		} = this.props;
 		const childNode = node === 'ul' ? 'li' : 'div';
 		const listItems = options.map(element => itemRenderer(childNode, element));
-		if (node === 'ul') return <ul>{listItems}</ul>;
-		else return <div>{listItems}</div>;
+		if (node === 'ul') return <ul className="list">{listItems}</ul>;
+		else return <div className="list">{listItems}</div>;
 	}
 }

@@ -11,8 +11,8 @@ function heroRender(node, element) {
 					<figcaption>{element.hero}</figcaption>
 					<img src={element.avatar} alt={element.hero} />
 					<figcaption>{element.name}</figcaption>
+					<TextTrimmer text={element.description} />
 				</figure>
-				<TextTrimmer text={element.description} />
 			</li>
 		);
 	} else
@@ -22,8 +22,8 @@ function heroRender(node, element) {
 					<figcaption>{element.hero}</figcaption>
 					<img src={element.avatar} alt={element.hero} />
 					<figcaption>{element.name}</figcaption>
+					<TextTrimmer text={element.description} />
 				</figure>
-				<TextTrimmer text={element.description} />
 			</div>
 		);
 }
