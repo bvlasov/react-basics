@@ -3,12 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Home from './components/Home';
+import { userInfo } from 'os';
+
+const user = {
+	firstName: 'John',
+	lastName: 'Doe'
+};
 
 const renderApplication = () => {
-	ReactDOM.render(
-		<Home />,
-		document.querySelector('#root')
-	);
+	ReactDOM.render(<Home dog={user} />, document.querySelector('#root'));
 };
 
 renderApplication(Home);
