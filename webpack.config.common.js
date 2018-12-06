@@ -30,19 +30,8 @@ module.exports = {
 			},
 			{
 				test: /\.(js|jsx)$/,
-				use: ['babel-loader', 'eslint-loader'],
+				use: ['babel-loader'],
 				exclude: /node_modules/
-			},
-			{
-				test: /\.(png|jpg|gif)$/i,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 8192
-						}
-					}
-				]
 			}
 		]
 	},
