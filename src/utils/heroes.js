@@ -3,25 +3,35 @@ import spidermanImg from '../images/spiderman.jpg';
 import thorImg from '../images/thor.jpg';
 import ironmanImg from '../images/ironman.jpg';
 
-export default [
-	{ 
-		hero:  'Iron Man',
+const heroes = [
+	{
+		id: '1',
+		hero: 'Iron Man',
 		avatar: ironmanImg,
-		name: 'Tony Stark'
+		name: 'Tony Stark',
+		desc:
+			'text fish'
 	},
-	{ 
-		hero:  'Deadpool',
+	{
+		id: '2',
+		hero: 'Deadpool',
 		avatar: deadpoolImg,
-		name: 'Wade Wilson'
+		name: 'Wade Wilson',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium in ipsam iste, laboriosam qui et. Ad dolore inventore architecto dicta, quia voluptatum sit cum similique quibusdam, aliquam, iusto alias labore.'
 	},
-	{ 
-		hero:  'Spiderman',
+	{
+		id: '3',
+		hero: 'Spiderman',
 		avatar: spidermanImg,
-		name: 'Peter Parker'
+		name: 'Peter Parker',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium in ipsam iste, laboriosam qui et. Ad dolore inventore architecto dicta, quia voluptatum sit cum similique quibusdam, aliquam, iusto alias labore.'
 	},
-	{ 
-		hero:  'Thor',
+	{
+		id: '4',
+		hero: 'Thor',
 		avatar: thorImg,
-		name: ' - '
-	},
+		name: ' - ',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium in ipsam iste, laboriosam qui et. Ad dolore inventore architecto dicta, quia voluptatum sit cum similique quibusdam, aliquam, iusto alias labore.'
+	}
 ];
+export default heroes;
