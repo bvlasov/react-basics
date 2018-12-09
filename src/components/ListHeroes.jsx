@@ -11,6 +11,13 @@ export default class ListHeroes extends React.Component {
 		);
 	}
 
+	showLastHeroe(e) {
+		const lastLi = e.currentTarget.lastElementChild;
+		if (lastLi.contains(e.target)) {
+			console.log(lastLi.firstElementChild.textContent);
+		}
+	}
+
 	render() {
 		const {
 			options = [],
@@ -19,7 +26,11 @@ export default class ListHeroes extends React.Component {
 		} = this.props;
 		const listItems = this.props.options.map(itemRender);
 		if (this.props.listType === 'ul') {
-			return <ul className="list">{listItems}</ul>;
+			return (
+				<ul className="list" onClick={this.showLastHeroe}>
+					{listItems}
+				</ul>
+			);
 		} else if (this.props.listType === 'div') {
 			return <div className="list">{listItems}</div>;
 		}
