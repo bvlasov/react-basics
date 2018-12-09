@@ -29,6 +29,9 @@ const listRenderer = (choose, data) => {
 	);
 };
 
+// const log = (data) => {
+// 	console.log(data.name);
+// };
 
 
 class Home extends React.Component {
