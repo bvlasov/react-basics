@@ -4,24 +4,31 @@ import thorImg from '../images/thor.jpg';
 import ironmanImg from '../images/ironman.jpg';
 
 export default [
-	{ 
-		hero:  'Iron Man',
+	{
+		hero: 'Iron Man',
 		avatar: ironmanImg,
-		name: 'Tony Stark'
+		name: 'Tony Stark',
+		description:
+      'IronManIronManIronManIronManIronManIronManIronManIronManIronManIronMan'
 	},
-	{ 
-		hero:  'Deadpool',
+	{
+		hero: 'Deadpool',
 		avatar: deadpoolImg,
-		name: 'Wade Wilson'
+		name: 'Wade Wilson',
+		description:
+      'DeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpoolDeadpool'
 	},
-	{ 
-		hero:  'Spiderman',
+	{
+		hero: 'Spiderman',
 		avatar: spidermanImg,
-		name: 'Peter Parker'
+		name: 'Peter Parker',
+		description:
+      'SpidermanSpidermanSpidermanSpidermanSpidermanSpidermanSpidermanSpidermanSpidermanSpiderman'
 	},
-	{ 
-		hero:  'Thor',
+	{
+		hero: 'Thor',
 		avatar: thorImg,
-		name: ' - '
-	},
+		name: ' - ',
+		description: 'ThorThorThorThorThorThorThorThorThorThorThorThor'
+	}
 ];
