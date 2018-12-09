@@ -11,7 +11,7 @@ const renderApplication = () => {
 	);
 };
 
-renderApplication(Home);
+renderApplication();
 
 if (module.hot) {
 	module.hot.accept('./components/Home', () => {
