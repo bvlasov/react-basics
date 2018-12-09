@@ -1,16 +1,13 @@
 import React from 'react';
-
-const formatName = user => `${user.firstName} ${user.lastName}`;
-
-const user = {
-	firstName: 'John',
-	lastName: 'Doe'
-};
+import {List} from './List.jsx';
+import heroes from '../utils/heroes.js';
 
 const Home = () => (
 	<div>
-		<h1>Hello, {formatName(user)}!</h1>
+		<List data={heroes} tag={'ul'} showList={reverseList}/>
 	</div>
 );
-
+function reverseList (props) {
+	return props.reverse();
+}
 export default Home;
