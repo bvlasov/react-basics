@@ -1,32 +1,8 @@
 import React, { Component } from 'react';
-
+import TextTrimmer from '../TextTrimmer';
 class Item extends Component {
-	constructor(params) {
-		super();
-		this.state = {
-			text:
-				this.props.options.desc.length > 50
-					? this.props.options.desc.slice(0, 50)
-					: this.props.options.desc,
-		};
-	}
+
 	defaultRenderer(element, key) {
-		const textTrimmer = text => {
-			if (text.length > 50) {
-				return (
-					<div>
-						<p className="itemDesc">{this.state.text}</p>
-						<button>Show</button>
-					</div>
-				);
-			} else {
-				return (
-					<div>
-						<p className="itemDesc">{this.state.text}</p>
-					</div>
-				);
-			}
-		};
 		if (element === 'div') {
 			return (
 				<div className="item">
@@ -35,7 +11,7 @@ class Item extends Component {
 					<figcaption style={{ textAlign: 'center' }}>
 						{element.name}
 					</figcaption>
-					{textTrimmer(this.state.text)}
+					<TextTrimmer text={element.desc} />
 				</div>
 			);
 		} else {
@@ -46,7 +22,7 @@ class Item extends Component {
 					<figcaption style={{ textAlign: 'center' }}>
 						{element.name}
 					</figcaption>
-					{textTrimmer(this.state.text)}
+					<TextTrimmer text={element.desc} />
 				</li>
 			);
 		}
